@@ -1,0 +1,25 @@
+{
+  "name": "boardgamejerk",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "twitter": "node twitter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ChrisChinchilla/boardgamejerk.git"
+  },
+  "author": "Chris Ward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisChinchilla/boardgamejerk/issues"
+  },
+  "homepage": "https://github.com/ChrisChinchilla/boardgamejerk#README",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "request": "^2.88.0",
+    "twit": "^2.2.10"
+  }
+}
