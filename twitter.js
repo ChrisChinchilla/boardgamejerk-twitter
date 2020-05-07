@@ -2,10 +2,9 @@ let Twit = require("twit");
 require("dotenv").config();
 
 var tweetText = '';
-const http = require('http');
+const https = require('https');
 
-
-http.get('http://localhost:8000', (resp) => {
+https.get(`https://${process.env.HOST}`, (resp) => {
   let data = '';
 
   resp.on('data', (chunk) => {
