@@ -12,7 +12,16 @@ https.get(`https://${process.env.HOST}`, (resp) => {
   });
 
   resp.on('end', () => {
-    tweetText = JSON.parse(data).message
+    tweetText = JSON.parse(data).message;
+    console.log(tweetText);
+
+    T.post(
+      "statuses/update",
+      { status: tweetText + " #boardgames" },
+      (err, data, response) => {
+        console.log(data);
+      }
+    );
   });
 
 }).on("error", (err) => {
@@ -27,12 +36,4 @@ const T = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-console.log(tweetText);
 
-T.post(
-  "statuses/update",
-  { status: tweetText + " #boardgames" },
-  (err, data, response) => {
-    console.log(data);
-  }
-);
